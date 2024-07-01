@@ -1,0 +1,37 @@
+<!-- review.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <link rel="stylesheet" href="/review.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+    <h1>Your ride is booked!</h1>
+    <p>Your car will be here in a few minutes.</p>
+    
+    <h2>Please rate our service:</h2>
+    <div class="rating">
+        <span class="star" onclick="rate(1)">★</span>
+        <span class="star" onclick="rate(2)">★</span>
+        <span class="star" onclick="rate(3)">★</span>
+        <span class="star" onclick="rate(4)">★</span>
+        <span class="star" onclick="rate(5)">★</span>
+    </div>
+
+    <button onclick="goBack()">Go Back</button>
+
+    <script>
+        function rate(stars) {
+            alert(`You rated us ${stars} stars! Thank you for your feedback.`);
+            // Here you can send the rating to the server
+        }
+
+        function goBack() {
+            window.location.href = "/welcome";
+        }
+    </script>
+</body>
+</html>

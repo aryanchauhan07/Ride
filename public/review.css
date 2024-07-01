@@ -1,0 +1,15 @@
+/* review.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.rating {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.star {
+    color: gold;
+}

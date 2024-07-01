@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Rides</title>
+    <link rel="stylesheet" href="/driver.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+
+<div class="ride-container">
+   
+   <!-- Ride Mini -->
+   <div class="ride-type">
+        <div class="left">
+            <img src="/assets/ride_mini.jpg" alt="Ride Mini">
+        </div>
+        <div class="right">
+            <h2>Ride Mini</h2>
+            <p>Comfortable and affordable rides</p>
+            <button type="button" onclick="bookNow()">Book Now</button>
+        </div>
+    </div>
+
+    <!-- Ride Prime -->
+    <div class="ride-type">
+        <div class="left">
+            <img src="/assets/ride_prime.jpg" alt="Ride Prime">
+        </div>
+        <div class="right">
+            <h2>Ride Prime</h2>
+            <p>Luxurious and premium rides</p>
+            <button type="button" onclick="bookNow()">Book Now</button>
+        </div>
+    </div>
+
+    <!-- Ride Economy -->
+    <div class="ride-type">
+        <div class="left">
+            <img src="/assets/ride_economy.jpg" alt="Ride Economy">
+        </div>
+        <div class="right">
+            <h2>Ride Economy</h2>
+            <p>Affordable and reliable rides</p>
+            <button type="button" onclick="bookNow()">Book Now</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function bookNow() {
+        window.location.href = "/booknow";
+    }
+</script>
+
+</body>
+</html>

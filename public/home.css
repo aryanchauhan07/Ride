@@ -1,0 +1,810 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: "Averta CY W10"; */
+ 
+    }
+
+ 
+    
+    *::selection{
+        color: #ffff;
+        background-color: #000;
+    }
+    nav{
+        min-height: 70px; /* Adjust the min-height to reduce the height of the navbar */
+        display: flex;
+        justify-content: center;
+        justify-content: space-around;
+        background-color: black;
+        color: white;
+      gap: 28rem;
+        /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    }
+    
+    nav .left{
+        display: flex;
+     
+    }
+    
+    .left img{
+        margin-top: 20px;
+        /* margin-left: -7rem; */
+        height: 35px; /* Adjusted height of the logo */
+    }
+
+/*  for the user name*/
+.username {
+    margin-top: 1.5rem;
+    font-size: 1.4em;
+    margin-left: 20px;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+
+
+    
+    nav .right{
+        display: flex;
+       justify-content: space-between;
+       margin-top: 20px;
+       font-weight: 600;
+       font-size: 1.3rem;
+      
+    }
+    
+    nav a{
+        height: 80%;
+        width: 80%;
+        
+    }
+    
+    
+    nav a:hover{
+      
+        transform: scale(1.1);
+       border-radius: 15px;
+       color:  rgba(130, 128, 128, 0.812);
+        transition: all 0.3s linear 0s;
+        
+    }
+    
+    nav button:hover{
+       background-color: rgba(130, 128, 128, 0.812);
+       transform: scale(1.1);
+       transition: all 0.3s linear 0s;
+    
+    }
+    
+    
+    a{
+        text-decoration: none;
+        color: azure;
+        
+    }
+    
+    
+    .right button{
+       width: 100px;
+       height: 36px;
+    border: none;
+    border-radius: 22px;
+    margin-top: -4px;
+    font-weight: 600;
+    }
+
+
+/* user icon*/
+
+
+
+
+/* CSS for the video container */
+.video-container {
+    position: relative; /* Relative positioning for absolute overlay */
+}
+
+/* CSS for the video */
+.video {
+    position: relative;
+    z-index: 0; /* Lower z-index to keep it below other elements */
+}
+
+/* CSS for the yellow overlay */
+.yellow-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 0, 0.12); /* Yellow with 20% opacity */
+    z-index: -1; /* Even lower z-index to keep it below the video */
+}
+
+
+
+
+
+.video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    
+}
+
+@media(min-aspect-ratio:16/9){
+
+.video{
+    width: 100%;
+    height: auto;
+}
+
+}
+
+.content-wrapper{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('video.mp4') no-repeat center center fixed;
+    background-size: cover;
+   
+
+}
+
+/* .content{
+    display: flex;
+   justify-content: center;
+
+    
+} */
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    margin-top: 0;  /* Removed the negative margin */
+    width: 100%;
+    z-index: 4;
+    position: absolute;
+    top: 10%;  /* Adjusted position slightly lower */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.background{
+    /* border:2px solid red; */
+    display: flex;
+    justify-content: center;
+   margin-top: 3rem;
+    padding: 30px 3px;
+    border-radius: 30px;
+    margin-right: 20rem;
+    width: 45%;
+    
+}
+
+
+
+    .background h1{
+    
+        font-weight: 600;
+        color: white;
+        font-size: 5rem;
+        /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    }
+
+.background h1:hover{
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+}
+
+    .background p{
+       
+        color: white;
+        font-size: 1.3rem;
+        /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+         margin-left: 25px;
+       
+    }
+
+    /* .background{
+
+      margin-right: 20rem;
+        margin-top: 5rem;
+    
+        width: 450px;
+        padding: 30px 3px;
+        border-radius: 30px;
+    } */
+
+/* placeholder animation */
+
+
+    .location input{
+       
+      position: relative;
+      height: 50px;
+      width: 100%;
+      border-inline: none;
+      background-color: transparent;
+      border-radius: 30px;
+      color: white;
+      border: transparent;
+      padding: 20px 45px 20px 20px;
+
+    }
+.location i{
+    color: red;
+    font-size: 1.5rem;
+    transform: translatey(-20%);
+    margin-top: 10px;
+}
+
+
+.price{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#Schedule{
+
+    background-color: rgba(37, 34, 34, 0.75);
+    text-align: center;
+}
+
+.price button{
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-top: 25px;
+    height: 35px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: transparent;
+    
+    animation: traceLights 4s infinite linear;
+}
+.price button:hover{
+    transform: scale(1.1);
+    background-color: rgba(130, 128, 128, 0.812);
+     transition: all 0.4s linear 0s;
+
+}
+
+
+/* Animation for the rotating lights */
+
+@keyframes traceLights {
+    0%, 100% {
+        box-shadow: 
+            0 0 0px 0px rgba(78, 121, 167, 0.5),
+            0 0 0px 0px rgba(138, 143, 175, 0.5);
+    }
+    25% {
+        box-shadow: 
+            0 0 0px 0px rgba(78, 121, 167, 0.5),
+            0 0 5px 5px rgba(138, 143, 175, 0.5);
+    }
+    50% {
+        box-shadow: 
+            0 0 5px 5px rgba(78, 121, 167, 0.5),
+            0 0 0px 0px rgba(138, 143, 175, 0.5);
+    }
+    75% {
+        box-shadow: 
+            0 0 0px 0px rgba(78, 121, 167, 0.5),
+            0 0 5px 5px rgba(138, 143, 175, 0.5);
+    }
+}
+
+.location input {
+    /* ... (previous styles) ... */
+
+    animation: traceLights 4s infinite linear;
+}
+
+.ready{
+display: flex;
+justify-content: center;
+gap: 80px;
+margin-top: 50px;
+padding: 30px;
+margin-left: 200px;
+}
+
+/* ... (previous CSS code) ... */
+
+.saftey {
+    background-image: url(assets/taxidriver.jpg);
+    width: 100%;
+    height: 300px;
+    border-radius: 30px;
+    text-align: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden; /* Hide overflowing content */
+    transition: transform 0.4s, filter 0.5s; /* Transition for scale and filter */
+    z-index: 0; /* Ensure the background image is at the bottom of the stacking context */
+}
+
+.saftey:hover {
+    transform: scale(1.1); /* Scale up the image on hover */
+    filter: grayscale(50%) opacity(0.7); /* Apply grayscale and opacity on hover */
+}
+
+.learn-more-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the button */
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s; /* Transition for opacity */
+    z-index: 1; /* Ensure the button appears above the gray filter */
+}
+
+.saftey:hover .learn-more-button {
+    opacity: 1; /* Show the button on hover */
+}
+
+.learn-more-button a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    animation: trafficLight 3s infinite; /* Traffic light animation */
+}
+
+/* Traffic light animation for "Learn more" link */
+@keyframes trafficLight {
+    0%, 25% {
+        color: rgb(255, 4, 4); /* Red light */
+    }
+    50%, 75% {
+        color: yellow; /* Yellow light */
+    }
+    100% {
+        color: rgb(5, 230, 5); /* Green light */
+    }
+}
+
+.text h1{
+    font-size: 2rem;
+  
+}
+
+.text p{
+    padding: 10px;
+    font-weight: 50;
+
+}
+
+  
+.ready{
+    color: #ffff;
+    background-color: #000;
+}
+
+
+/* scrolling effect */
+#featured{
+    padding: 10vw 15vw;
+    background-image: linear-gradient( rgba(255, 255, 255, 0.858) 1%, #dd6a2c2f 9%, #e0b5573a, #96c97e37, #0091c120, #c8c6c72e, #c8c6c722, #c8c6c711);
+    
+   
+}
+#featured {
+    padding: 10vw 15vw;
+}
+
+.fheading>h1 {
+    line-height: 1;
+    font-size: 4vw;
+    font-weight: 400;
+}
+
+.fheading>h1:nth-child(2) {
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
+}
+
+#fimages {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    margin-top: 5vw;
+}
+
+#fleft {
+    overflow: hidden;
+    width: 45%;
+    height: inherit;
+}
+
+.fleftelm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: inherit;
+}
+
+.fleftelm h1 {
+    font-size: 2.5vw;
+    line-height: 1;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin: 1.5vw 0;
+}
+
+.fleftelm h3 {
+    font-size: 1.6vw;
+    font-weight: 450;
+}
+
+.fleftelm h4 {
+    opacity: .5;
+}
+
+#fright {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 45%;
+    height: inherit;
+}
+
+#fright .images {
+    width: 90%;
+    height: 90%;
+}
+
+#fright .images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#svg{
+    position:relative; 
+    
+    
+  }
+  
+ #player{
+    height:250px;
+    
+ }
+
+
+.fleftelm button{
+    padding: 1.5vw 2vw;
+    margin-top: 10vw;
+    margin-bottom: 5vw;
+    border-radius: 100px;
+    border: 2px solid #e6e6e6;
+    background-color: #fff;
+    font-size: 1.7vw;
+    color: #000000b6; 
+} 
+
+
+
+
+
+.faq{
+
+display: flex;
+flex-direction: column;
+text-align: center;
+justify-content: space-between;
+gap: 20px;
+background-color: rgba(215, 214, 214, 0.014);
+margin-top: 10px;
+margin-bottom: 20px;
+
+
+
+}
+
+.faq h1{
+    font-weight: 500;
+    font-size: 2.1rem;
+}
+
+.faq a{
+    font-size: 1rem;
+    color: black;
+    text-decoration: underline;
+}
+
+.faq summary{
+font-weight: 550;
+
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+
+/* .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    background: transparent;
+} */
+
+/* the user name  */
+
+
+
+
+
+
+.menu a {
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    padding: 6px 20px;
+    transition: color 0.5s;
+}
+
+.menu a:hover {
+    color: #0ef;
+}
+
+.menu a span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0ef;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+.menu a:hover span {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+
+/* footer */
+
+
+
+
+.new_footer_area {
+    background:  #000000e7;
+}
+
+
+.new_footer_top {
+    padding: 120px 0px 270px;
+    position: relative;
+      overflow-x: hidden;
+}
+.new_footer_area .footer_bottom {
+    padding-top: 5px;
+    padding-bottom: 50px;
+}
+.footer_bottom {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    color: white;
+    padding: 27px 0px;
+}
+.new_footer_top .company_widget p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #6a7695;
+    margin-bottom: 20px;
+}
+.new_footer_top .company_widget .f_subscribe_two .btn_get {
+    border-width: 1px;
+    margin-top: 20px;
+}
+.btn_get_two:hover {
+    background: transparent;
+    color:white;
+    border-radius: 20px;
+}
+.btn_get:hover {
+    color: #fff;
+    background: #6754e2;
+    border-color: #6754e2;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+
+
+.new_footer_top .f_widget.about-widget .f_list li a:hover {
+    color: #5e2ced;
+}
+.new_footer_top .f_widget.about-widget .f_list li {
+    margin-bottom: 11px;
+}
+.f_widget.about-widget .f_list li:last-child {
+    margin-bottom: 0px;
+}
+.f_widget.about-widget .f_list li {
+    margin-bottom: 15px;
+}
+.f_widget.about-widget .f_list {
+    margin-bottom: 0px;
+}
+.new_footer_top .f_social_icon a {
+    width: 44px;
+    height: 44px;
+    line-height: 43px;
+    background: transparent;
+    border: 1px solid #e2e2eb;
+    font-size: 24px;
+}
+.f_social_icon a {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 45px;
+    color:white;
+    display: inline-block;
+    background: #ebeef5;
+    text-align: center;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.ti-facebook:before {
+    content: "\e741";
+}
+.ti-twitter-alt:before {
+    content: "\e74b";
+}
+.ti-vimeo-alt:before {
+    content: "\e74a";
+}
+.ti-pinterest:before {
+    content: "\e731";
+}
+
+.btn_get_two {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #5e2ced;
+    border-color: #5e2ced;
+    color: #fff;
+}
+
+.btn_get_two:hover {
+    background: transparent;
+    color: #5e2ced;
+}
+
+.new_footer_top .f_social_icon a:hover {
+    background: #5e2ced;
+    border-color: #5e2ced;
+  color:white;
+}
+.new_footer_top .f_social_icon a + a {
+    margin-left: 4px;
+}
+.new_footer_top .f-title {
+    margin-bottom: 30px;
+    color: #263b5e;
+}
+.f_600 {
+    font-weight: 600;
+}
+.f_size_18 {
+    font-size: 18px;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #4b505e;
+}
+.new_footer_top .f_widget.about-widget .f_list li a {
+    color: #6a7695;
+}
+
+
+.new_footer_top .footer_bg {
+    position: absolute;
+    bottom: 0;
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigB8iI5tb8WSVBuVUGc9UjjB8O0708X7Fdic_4O1LT4CmLHoiwhanLXiRhe82yw0R7LgACQ2IhZaTY0hhmGi0gYp_Ynb49CVzfmXtYHUVKgXXpWvJ_oYT8cB4vzsnJLe3iCwuzj-w6PeYq_JaHmy_CoGoa6nw0FBo-2xLdOPvsLTh_fmYH2xhkaZ-OGQ/s16000/footer_bg.png") no-repeat scroll center 0;
+    width: 100%;
+    height: 266px;
+}
+
+.new_footer_top .footer_bg .footer_bg_one {
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia0PYPxwT5ifToyP3SNZeQWfJEWrUENYA5IXM6sN5vLwAKvaJS1pQVu8mOFFUa_ET4JuHNTFAxKURFerJYHDUWXLXl1vDofYXuij45JZelYOjEFoCOn7E6Vxu0fwV7ACPzArcno1rYuVxGB7JY6G7__e4_KZW4lTYIaHSLVaVLzklZBLZnQw047oq5-Q/s16000/volks.gif") no-repeat center center;
+    width: 330px;
+    height: 105px;
+  background-size:100%;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    -webkit-animation: myfirst 22s linear infinite;
+    animation: myfirst 22s linear infinite;
+}
+
+.new_footer_top .footer_bg .footer_bg_two {
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyLGwEUVwPK6Vi8xXMymsc-ZXVwLWyXhogZxbcXQYSY55REw_0D4VTQnsVzCrL7nsyjd0P7RVOI5NKJbQ75koZIalD8mqbMquP20fL3DxsWngKkOLOzoOf9sMuxlbyfkIBTsDw5WFUj-YJiI50yzgVjF8cZPHhEjkOP_PRTQXDHEq8AyWpBiJdN9SfQA/s16000/cyclist.gif") no-repeat center center;
+    width: 88px;
+    height: 100px;
+  background-size:100%;
+    bottom: 0;
+    left: 38%;
+    position: absolute;
+    -webkit-animation: myfirst 30s linear infinite;
+    animation: myfirst 30s linear infinite;
+}
+
+
+
+@-moz-keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+
+
+
+
+
+

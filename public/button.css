@@ -1,0 +1,60 @@
+.noe {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.noe span {
+    display: block;
+    padding: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.noe:before {
+    content: '';
+    background: linear-gradient(45deg, #4e79a7, #6a8caf, #8c9bbe, #b0b9d0, #d4d8e5, #c4b7dd, #b2a2d1, #9e8bc5, #8b75b9);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: 100%;
+    height: 100%;
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 25px;
+}
+
+.noe:hover:before {
+    opacity: 1;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}

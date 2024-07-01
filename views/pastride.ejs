@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Rides</title>
+    <link rel="stylesheet" href="/pastride.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+
+<h1>Past Rides</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Driver Name</th>
+            <th>Age</th>
+            <th>Location</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% pastRides.forEach(ride => { %>
+            <tr>
+                <td><%= ride.driverName %></td>
+                <td><%= ride.age %></td>
+                <td><%= ride.location %></td>
+                <td><%= ride.date.toDateString() %></td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+
+<a href="/welcome">Go Back</a>
+
+</body>
+</html>

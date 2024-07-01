@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prices</title>
+    <link rel="stylesheet" href="/getPrices.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Prices</h1>
+        <div class="price-info">
+            <div class="location-box">
+                <label>From:</label>
+                <span><%= location %></span>
+            </div>
+            <div class="destination-box">
+                <label>To:</label>
+                <span><%= destination %></span>
+            </div>
+            <div class="price-box">
+                <p>The price is: <%= price %> Rs</p>
+            </div>
+        </div>
+        <a href="/welcome">Go Back</a>
+    </div>
+</body>
+</html>

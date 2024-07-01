@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now</title>
+    <link rel="stylesheet" href="/booknow.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+    <h1>Book Now</h1>
+    
+    <div class="driver-info">
+        <div class="driver-image">
+            <img src="assets/driver-face.jpg" alt="Driver Face" class="driver-face">
+        </div>
+        <div class="info">
+            <h2>Driver Information</h2>
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Age:</strong> 35</p>
+        </div>
+    </div>
+
+    <form id="captchaForm" action="/booknow" method="post">
+        <label for="captchaInput">Enter CAPTCHA:</label>
+        <div id="captcha"></div>
+        <input type="text" id="captchaInput" name="captchaInput" required>
+        <button type="submit">Confirm Booking</button>
+    </form>
+
+    <script>
+        // Function to generate a random CAPTCHA
+        function generateCaptcha() {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let captcha = '';
+            for (let i = 0; i < 6; i++) {
+                captcha += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return captcha;
+        }
+
+        // Generate and display CAPTCHA
+        const captcha = generateCaptcha();
+        document.getElementById("captcha").innerText = captcha;
+
+        // Validate CAPTCHA
+        document.getElementById("captchaForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const enteredCaptcha = document.getElementById("captchaInput").value;
+            const actualCaptcha = document.getElementById("captcha").innerText;
+
+            if (enteredCaptcha === actualCaptcha) {
+                // Redirect to review page
+                window.location.href = "/review";
+            } else {
+                alert("Incorrect CAPTCHA. Please try again.");
+                // Optionally, regenerate a new CAPTCHA if incorrect
+                const newCaptcha = generateCaptcha();
+                document.getElementById("captcha").innerText = newCaptcha;
+            }
+        });
+    </script>
+</body>
+</html>
